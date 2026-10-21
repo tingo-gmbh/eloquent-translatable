@@ -3,15 +3,14 @@
 namespace Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Group;
 use Tingo\Translatable\Tests\TestCase;
 
 class TranslationExistsTest extends TestCase
 {
     use RefreshDatabase;
 
-    /**
-     * @group default
-     */
+    #[Group('default')]
     public function testTranslationExists()
     {
         $entity = $this->createTestEntity();

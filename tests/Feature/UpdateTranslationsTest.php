@@ -3,6 +3,7 @@
 namespace Tingo\Translatable\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Group;
 use Tingo\Translatable\Models\Translation;
 use Tingo\Translatable\Tests\TestCase;
 
@@ -10,9 +11,7 @@ class UpdateTranslationsTest extends TestCase
 {
     use RefreshDatabase;
 
-    /**
-     * @group default
-     */
+    #[Group('default')]
     public function testUpdateTranslation()
     {
         $entity = $this->createTestEntity();

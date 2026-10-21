@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('category', 100);
             $table->text('description');
             $table->string('unit', 100);
-            $table->unsignedFloat('price');
+            $table->float('price');
         });
     }
 

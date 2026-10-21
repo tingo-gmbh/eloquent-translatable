@@ -78,7 +78,7 @@ trait Translatable
      * @param  bool  $refetch
      * @return string|null
      */
-    public function getTranslation(string $attribute, string $locale = null, bool $refetch = true): ?string
+    public function getTranslation(string $attribute, ?string $locale = null, bool $refetch = true): ?string
     {
         if (!$this->{$attribute}) {
             return null;
